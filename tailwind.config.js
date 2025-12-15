@@ -12,13 +12,32 @@ export default {
         card: "0 10px 25px rgba(14, 42, 79, 0.1)",
       },
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(135deg, rgba(14,42,79,0.9) 0%, rgba(14,42,79,0.6) 50%, rgba(197,155,66,0.2) 100%)',
+        "hero-gradient":
+          "linear-gradient(135deg, rgba(14,42,79,0.9) 0%, rgba(14,42,79,0.6) 50%, rgba(197,155,66,0.2) 100%)",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "Avenir", "Helvetica", "Arial", "sans-serif"],
+        sans: [
+          "Inter",
+          "system-ui",
+          "Avenir",
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+        ],
       },
       perspective: {
-        '1000': '1000px',
+        "1000": "1000px",
+      },
+
+      /* ✅ ADD THIS */
+      animation: {
+        marquee: "marquee 35s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
     },
   },

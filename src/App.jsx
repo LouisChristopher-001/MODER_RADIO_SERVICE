@@ -1,7 +1,9 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./index.css";
+
 import Navbar from "./components/Navbar.jsx";
+import BrandMarquee from "./components/BrandMarquee.jsx"; // ✅ ADD
 import Footer from "./components/Footer.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import FloatingActionButton from "./components/FloatingActionButton";
@@ -15,9 +17,17 @@ const Contact = lazy(() => import("./pages/Contact.jsx"));
 function App() {
   return (
     <div className="min-h-screen flex flex-col bg-bgWhite">
+      
+      {/* Fixed Header */}
       <Navbar />
+
+      {/* Fixed Brand Banner */}
+      <BrandMarquee />
+
       <ScrollToTop />
-      <main className="flex-1">
+
+      {/* ⬇️ THIS is where the padding belongs */}
+      <main className="flex-1 pt-[112px] md:pt-[120px]">
         <Suspense
           fallback={
             <div className="flex items-center justify-center h-screen">
@@ -34,7 +44,8 @@ function App() {
           </Routes>
         </Suspense>
       </main>
-      <FloatingActionButton/>
+
+      <FloatingActionButton />
       <Footer />
     </div>
   );
