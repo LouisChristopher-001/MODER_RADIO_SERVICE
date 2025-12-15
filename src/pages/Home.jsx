@@ -98,11 +98,11 @@ export default function Home() {
       <section className="container-padded py-16">
         <h2 className="section-title">Our Services</h2>
         <p className="section-subtitle">
-          Trusted electronics and home appliance solutions for everyday living.
+          Trusted electronics and Home\Kitchen appliance solutions for everyday living.
         </p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           <ServiceCard
-            title="Electronics & Appliances"
+            title="Electronics & Home \ Kitchen Appliances"
             description="Sales of quality home appliances, kitchen essentials, fans, water heaters, and electrical products."
             image={constructionImg}
             href="/construction"
@@ -177,7 +177,7 @@ export default function Home() {
           Quick answers to common questions about our products and services.
         </p>
 
-        <div className="mt-6 space-y-4">
+        <div className="mt-6 mb-6 space-y-4">
           {clientFAQs.map((faq) => (
             <div
               key={faq.id}

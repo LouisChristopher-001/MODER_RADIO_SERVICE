@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 import logo from "../../public/logo.png";
 
 const navItems = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/construction", label: "Products" },
-  // { to: "/realestate", label: "Real Estate" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -23,41 +23,50 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all ${
-        scrolled ? "bg-white shadow" : "bg-transparent"
-      } mb-6`}
+        scrolled ? "bg-white shadow-sm" : "bg-transparent"
+      }`}
     >
-      <nav className="container-padded flex items-center justify-between py-4">
+      <nav className="container-padded flex items-center justify-between py-3 md:py-4">
+        
+        {/* Logo + Brand */}
         <Link to="/" className="flex items-center gap-2">
-          {/* <div className="h-9 w-9 rounded-lg bg-primary text-white grid place-items-center font-bold">
-            ZC
-          </div> */}
-          <img src={logo} className="w-26 h-14"/>
-          <div className="leading-tight">
-            <div className="font-bold text-primary">MODERN RADIO SERVICE</div>
-            <div className="text-xs text-black">
+          <img
+            src={logo}
+            alt="Modern Radio Service"
+            className="h-10 w-auto md:h-14"
+          />
+
+          {/* Hide text on very small screens */}
+          <div className="hidden sm:block leading-tight">
+            <div className="font-semibold text-primary text-sm md:text-base">
+              MODERN RADIO SERVICE
+            </div>
+            <div className="text-xs text-gray-600">
               Electronics & Home Appliances
             </div>
           </div>
         </Link>
 
+        {/* Mobile Menu Button */}
         <button
-          className="md:hidden btn-primary px-3 py-2"
+          className="md:hidden p-2 rounded-lg border border-gray-200"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
-          Menu
+          {open ? <X size={20} /> : <Menu size={20} />}
         </button>
 
-        <ul className="hidden md:flex items-center gap-6">
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex items-center gap-4 lg:gap-6">
           {navItems.map((item) => (
             <li key={item.to}>
               <NavLink
                 to={item.to}
                 className={({ isActive }) =>
-                  `text-sm font-semibold transition pb-1 border-b-2 ${
+                  `text-sm font-medium transition pb-1 border-b-2 ${
                     isActive
                       ? "text-primary border-accent"
-                      : "border-transparent text-black"
+                      : "border-transparent text-gray-700"
                   } hover:text-primary`
                 }
               >
@@ -73,19 +82,20 @@ export default function Navbar() {
         </ul>
       </nav>
 
+      {/* Mobile Dropdown */}
       {open && (
-        <div className="md:hidden bg-white shadow">
-          <ul className="container-padded py-4 grid gap-3">
+        <div className="md:hidden bg-white shadow-md border-t">
+          <ul className="container-padded py-4 grid gap-4">
             {navItems.map((item) => (
               <li key={item.to}>
                 <NavLink
                   onClick={() => setOpen(false)}
                   to={item.to}
                   className={({ isActive }) =>
-                    `block py-2 text-sm font-semibold transition border-b-2 ${
+                    `block text-base font-medium ${
                       isActive
-                        ? "text-primary border-accent"
-                        : "text-warmGray border-transparent"
+                        ? "text-primary"
+                        : "text-gray-700"
                     }`
                   }
                 >
@@ -93,11 +103,15 @@ export default function Navbar() {
                 </NavLink>
               </li>
             ))}
-            <li>
-              <Link to="/contact" className="btn-accent w-full justify-center">
-                Request info
-              </Link>
-            </li>
+            <li className="hidden lg:flex">
+  <Link
+    to="/contact"
+    className="btn-accent whitespace-nowrap px-4 py-2 text-sm"
+  >
+    Request info
+  </Link>
+</li>
+
           </ul>
         </div>
       )}

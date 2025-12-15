@@ -3,7 +3,7 @@ import panoAbout from "../assets/pano-about.jpg";
 
 export default function About() {
   return (
-    <section className="container-padded py-32">
+    <section className="container-padded py-20 md:py-24">
       <h1 className="section-title">About Us</h1>
       <p className="section-subtitle max-w-2xl">
         Modern Radio Service is a trusted electronics and home appliances dealer
@@ -41,17 +41,14 @@ export default function About() {
         </div>
       </div>
 
-      <div className="mt-8">
-        <div className="w-full max-w-5xl aspect-[4/2] bg-gray-200 rounded-2xl overflow-hidden mx-auto grid place-items-center">
+      <div className="mt-10">
+  <img
+    src={panoAbout}
+    alt="Modern Radio Service Showroom"
+    className="w-full max-w-5xl aspect-[4/2] rounded-2xl object-cover mx-auto"
+  />
+</div>
 
-          <img
-  src={panoAbout}
-  alt="Modern Radio Service Showroom"
-  className="w-full max-w-5xl aspect-[4/2] rounded-2xl object-cover mx-auto"
-/>
-
-        </div>
-      </div>
     </section>
   );
 }
