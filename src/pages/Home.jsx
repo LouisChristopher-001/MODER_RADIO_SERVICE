@@ -4,6 +4,8 @@ import AnimatedCounter from "../components/AnimatedCounter.jsx";
 import ProjectGallery from "../components/ProjectGallery.jsx";
 import constructionImg from "../assets/construction.jpg";
 import realEstateImg from "../assets/realstate.jpg";
+import { Link } from "react-router-dom";
+
 
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
@@ -161,10 +163,11 @@ export default function Home() {
             Visit Modern Radio Service for trusted brands and honest guidance.
           </p>
           <div className="mt-6">
-            <a href="/contact" className="btn-accent">
-              Contact Us Today
-            </a>
-          </div>
+  <Link to="/contact" className="btn-accent">
+    Contact Us Today
+  </Link>
+</div>
+
         </div>
       </section>
 

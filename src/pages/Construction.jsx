@@ -216,7 +216,7 @@ export default function Construction() {
       </div>
 
       {/* CTA */}
-      <div className="text-center mt-16">
+      <div className="text-center mt-16 mb-6">
         <h3 className="text-2xl font-bold text-primary mb-4">
           Looking for the right appliance?
         </h3>
