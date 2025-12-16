@@ -6,7 +6,7 @@ import logo from "../../public/logo.png";
 const navItems = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
-  { to: "/construction", label: "Products" },
+  { to: "/Products", label: "Products" },
   { to: "/contact", label: "Contact" },
 ];
 

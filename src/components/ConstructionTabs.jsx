@@ -22,11 +22,11 @@ export default function ConstructionTabs() {
   const categories = [
     {
       name: "LED TVs",
-      sub: ["Smart LED TVs", "Android TVs", "4K Ultra HD TVs"],
+      sub: ["Smart LED TVs", "Android TVs", "4K Ultra HD TVs","OLED TVs"],
     },
     {
       name: "Mobile Phones",
-      sub: ["Smartphones", "Feature Phones", "Accessories"],
+      sub: ["Smartphones"],
     },
     {
       name: "Water Heaters",
@@ -37,20 +37,20 @@ export default function ConstructionTabs() {
       sub: ["OTG Ovens", "Microwave Ovens", "Built-in Ovens"],
     },
     {
-      name: "Mixers & Grinders",
-      sub: ["Mixer Grinders", "Wet Grinders", "Juicer Mixers"],
+      name: "Mixies & Grinders",
+      sub: ["Wet Grinders","T.Top grinder","Tilting grinder" ,"Juicer Mixie","Bullet mixie"],
     },
     {
-      name: "Gas Stoves & Cooktops",
-      sub: ["Gas Stoves", "Glass Cooktops", "Built-in Hobs"],
+      name: "Gas Stoves , Cooktops & Chimeys",
+      sub: ["Gas Stoves", "Glass Cooktops", "Built-in Hobs","Chimeys"],
     },
     {
-      name: "Fans & Lighting",
-      sub: ["Ceiling Fans", "Table Fans", "LED Lighting"],
+      name: "Fans",
+      sub: ["Ceiling Fans", "Table Fans", "Wall Fans","Pedestal Fans","Cabin Fans"],
     },
     {
       name: "Small Electricals",
-      sub: ["Irons", "Kettles", "Rice Cookers"],
+      sub: ["Iron box", "Kettles", "Rice Cookers"],
     },
   ];
 

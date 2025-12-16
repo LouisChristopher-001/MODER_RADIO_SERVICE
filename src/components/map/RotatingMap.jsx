@@ -51,7 +51,7 @@ export default function ContactMapLayout() {
       {/* Top buttons */}
       <div className="flex justify-between px-6">
         <LocationButton
-          label="Kumbakonam – Main Showroom"
+          label="KMU – Main Showroom"
           active={active === 0}
           onClick={() => setActive(0)}
         />

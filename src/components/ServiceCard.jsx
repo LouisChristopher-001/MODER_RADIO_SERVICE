@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion'
+import { useNavigate } from "react-router-dom";
 
-export default function ServiceCard({ title, description, image, href }) {
+export default function ServiceCard({ title, description, image, to }) {
+  const navigate = useNavigate();
   return (
     <motion.a
-      href={href}
-      className="card overflow-hidden hover:shadow-lg transition block"
+      className="card overflow-hidden hover:shadow-lg transition block cursor-pointer"
       whileHover={{ scale: 1.02 }}
+      onClick={() => navigate(to)}
     >
       <div className="h-40 bg-gray-200">
         {/* Placeholder image box */}

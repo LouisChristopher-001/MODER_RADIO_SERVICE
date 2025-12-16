@@ -111,13 +111,13 @@ export default function Home() {
             title="Electronics & Home \ Kitchen Appliances"
             description="Sales of quality home appliances, kitchen essentials, fans, water heaters, and electrical products."
             image={constructionImg}
-            href="/construction"
+            to="/Products"
           />
           <ServiceCard
             title="Sales & Support"
             description="Customer-focused sales assistance, warranty guidance, and after-sales support you can rely on."
             image={realEstateImg}
-            href="/contact"
+            to="/contact"
           />
         </div>
       </section>
@@ -128,7 +128,7 @@ export default function Home() {
           <h2 className="section-title">Why Choose Us</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { title: "Trusted Local Dealer", icon: "🏪" },
+              { title: "Trusted Local Dealer", icon: "" },
               { title: "Genuine Branded Products", icon: "✅" },
               { title: "Years of Customer Trust", icon: "🤝" },
               { title: "Reliable After-Sales Support", icon: "🛠️" },
