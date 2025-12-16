@@ -33,15 +33,15 @@ export default function Navbar() {
       <img
   src={logo}
   alt="Modern Radio Service"
-  className="h-16 md:h-18 lg:h-20 w-auto object-contain"
+  className="h-20 md:h-18 lg:h-20 w-auto object-contain"
  />
 
 
-      <div className="hidden sm:block leading-tight">
+      <div className="leading-tight">
         <div className="font-semibold text-primary text-sm md:text-base">
           MODERN RADIO SERVICE
         </div>
-        <div className="text-xs text-gray-600">
+        <div className="hidden sm:block text-xs text-gray-600">
           Electronics & Home Appliances
         </div>
       </div>

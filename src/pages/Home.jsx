@@ -6,6 +6,7 @@ import constructionImg from "../assets/construction.jpg";
 import realEstateImg from "../assets/realstate.jpg";
 import { Link } from "react-router-dom";
 import BrandMarquee from "../components/BrandMarquee";
+import GoogleReviews from "../components/GoogleReviews";
 
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
@@ -173,6 +174,7 @@ export default function Home() {
 
         </div>
       </section>
+      <GoogleReviews />
 
       {/* FAQs */}
       <div className="mt-12 max-w-4xl mx-auto">
