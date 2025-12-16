@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles aligned with Tailwind and the provided design system */
+:root {
+  color-scheme: light;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-bgWhite text-warmGray antialiased;
+}
+
+a {
+  @apply text-accent hover:text-primary transition-colors;
+}
+
+/* Utility components */
+.container-padded {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-title {
+  @apply text-3xl sm:text-4xl font-bold text-primary;
+}
+
+.section-subtitle {
+  @apply text-warmGray mt-2;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-md bg-primary text-white px-5 py-3  shadow hover:text-accent/90 transition;
+}
+
+.btn-accent {
+  @apply inline-flex items-center gap-2 rounded-md bg-accent text-white px-5 py-3 shadow hover:bg-accent/90 transition;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-card border border-gray-100;
+}
+
+/* 3D Flip Card Utilities */
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Leaflet Map Styles */
+.leaflet-container {
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  padding: 0;
+}
+
+.leaflet-popup-close-button {
+  color: #6b7280;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.leaflet-popup-close-button:hover {
+  color: #374151;
+}
+
+.custom-pin {
+  background: transparent !important;
+  border: none !important;
+}
