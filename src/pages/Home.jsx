@@ -5,7 +5,7 @@ import ProjectGallery from "../components/ProjectGallery.jsx";
 import constructionImg from "../assets/construction.jpg";
 import realEstateImg from "../assets/realstate.jpg";
 import { Link } from "react-router-dom";
-
+import BrandMarquee from "../components/BrandMarquee";
 
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
@@ -94,6 +94,9 @@ export default function Home() {
 
   return (
     <div>
+    
+        <BrandMarquee />
+     
       <HeroSection />
 
       {/* Services Overview */}

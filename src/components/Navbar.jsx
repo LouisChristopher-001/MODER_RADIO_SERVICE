@@ -22,30 +22,30 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all ${
-        scrolled ? "bg-white shadow-sm" : "bg-transparent"
-      }`}
-    >
-      <nav className="container-padded flex items-center justify-between py-3 md:py-4">
-        
-        {/* Logo + Brand */}
-        <Link to="/" className="flex items-center gap-2">
-          <img
-            src={logo}
-            alt="Modern Radio Service"
-            className="h-10 w-auto md:h-14"
-          />
+  className={`fixed top-0 left-0 right-0 z-50 transition-all
+  ${scrolled ? "bg-white shadow-sm" : "bg-transparent"}
+  min-h-[72px] md:min-h-[96px]`}
+>
 
-          {/* Hide text on very small screens */}
-          <div className="hidden sm:block leading-tight">
-            <div className="font-semibold text-primary text-sm md:text-base">
-              MODERN RADIO SERVICE
-            </div>
-            <div className="text-xs text-gray-600">
-              Electronics & Home Appliances
-            </div>
-          </div>
-        </Link>
+  <nav className="container-padded flex items-center justify-between py-2 md:py-3">
+
+    <Link to="/" className="flex items-center gap-2">
+      <img
+  src={logo}
+  alt="Modern Radio Service"
+  className="h-12 md:h-18 lg:h-20 w-auto object-contain"
+ />
+
+
+      <div className="hidden sm:block leading-tight">
+        <div className="font-semibold text-primary text-sm md:text-base">
+          MODERN RADIO SERVICE
+        </div>
+        <div className="text-xs text-gray-600">
+          Electronics & Home Appliances
+        </div>
+      </div>
+    </Link>
 
         {/* Mobile Menu Button */}
         <button
