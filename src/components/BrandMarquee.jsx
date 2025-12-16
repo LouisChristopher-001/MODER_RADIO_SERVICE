@@ -8,12 +8,12 @@ export default function BrandMarquee() {
           {[...logos, ...logos].map((logo, index) => (
             <div
               key={index}
-              className="flex items-center justify-center mx-6 w-[100px] h-12"
+              className="flex items-center justify-center mx-6 w-[100px] h-8"
             >
               <img
                 src={logo}
                 alt="Brand logo"
-                className="max-h-10 max-w-full object-contain opacity-80"
+                className="max-h-6 max-w-full object-contain opacity-80"
                 loading="lazy"
               />
             </div>
