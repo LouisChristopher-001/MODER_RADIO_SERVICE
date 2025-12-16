@@ -1,4 +1,5 @@
 import ContactForm from "../components/ContactForm.jsx";
+import RotatingMap from "../components/map/RotatingMap.jsx";
 
 export default function Contact() {
   return (
@@ -11,8 +12,8 @@ export default function Contact() {
 
       <div className="mt-8 grid gap-8 md:grid-cols-2">
         <ContactForm />
-
-        <div className="card p-6">
+<RotatingMap  />
+        {/* <div className="card p-6">
           <h3 className="font-semibold text-primary">Showroom</h3>
           <p className="text-sm text-warmGray mt-2">
             Modern Radio Service
@@ -37,7 +38,7 @@ export default function Contact() {
               allowFullScreen
             ></iframe>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

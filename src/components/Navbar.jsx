@@ -33,7 +33,7 @@ export default function Navbar() {
       <img
   src={logo}
   alt="Modern Radio Service"
-  className="h-12 md:h-18 lg:h-20 w-auto object-contain"
+  className="h-16 md:h-18 lg:h-20 w-auto object-contain"
  />
 
 
